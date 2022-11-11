@@ -43,14 +43,14 @@ def parse_star_parameters(line, star):
     **line** — строка с описание звезды.
     **star** — объект звезды.
     """
-    list_of_data = int(line.split())
-    star.R = int(list_of_data[1])
-    star.color = int(list_of_data[2])
-    star.m = int(list_of_data[3])
-    star.x = int(list_of_data[4])
-    star.y = int(list_of_data[5])
-    star.Vx = int(list_of_data[6])
-    star.Vy = int(list_of_data[7])
+    list_of_data = line.split()
+    star.R = float(list_of_data[1])
+    star.color = list_of_data[2]
+    star.m = float(list_of_data[3])
+    star.x = float(list_of_data[4])
+    star.y = float(list_of_data[5])
+    star.Vx = float(list_of_data[6])
+    star.Vy = float(list_of_data[7])
 
 
 def parse_planet_parameters(line, planet):
@@ -69,13 +69,13 @@ def parse_planet_parameters(line, planet):
     **planet** — объект планеты.
     """
     list_of_data = line.split()
-    planet.R = int(list_of_data[1])
+    planet.R = float(list_of_data[1])
     planet.color = list_of_data[2]
-    planet.m = int(list_of_data[3])
-    planet.x = int(list_of_data[4])
-    planet.y = int(list_of_data[5])
-    planet.Vx = int(list_of_data[6])
-    planet.Vy = int(list_of_data[7])
+    planet.m = float(list_of_data[3])
+    planet.x = float(list_of_data[4])
+    planet.y = float(list_of_data[5])
+    planet.Vx = float(list_of_data[6])
+    planet.Vy = float(list_of_data[7])
 
 
 def write_space_objects_data_to_file(output_filename, space_objects):
