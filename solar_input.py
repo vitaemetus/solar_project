@@ -69,13 +69,13 @@ def parse_planet_parameters(line, planet):
     **planet** — объект планеты.
     """
     list_of_data = line.split()
-    planet.R = list_of_data[1]
+    planet.R = int(list_of_data[1])
     planet.color = list_of_data[2]
-    planet.m = list_of_data[3]
-    planet.x = list_of_data[4]
-    planet.y = list_of_data[5]
-    planet.Vx = list_of_data[6]
-    planet.Vy = list_of_data[7]
+    planet.m = int(list_of_data[3])
+    planet.x = int(list_of_data[4])
+    planet.y = int(list_of_data[5])
+    planet.Vx = int(list_of_data[6])
+    planet.Vy = int(list_of_data[7])
 
 
 def write_space_objects_data_to_file(output_filename, space_objects):
