@@ -53,8 +53,10 @@ def recalculate_space_objects_positions(space_objects, dt):
         calculate_force(body, space_objects)
     for body in space_objects:
         move_space_object(body, dt)
-        if body.type == 'planet':
-            print(body.Vx, body.Vy)
+        body.Vx = np.append(body.Vx_list)
+        (body.x**2 + body.y**2)**0.5 = np.append(d_list)
+        body.Vy = np.append(body.Vy_list)
+
 
 
 if __name__ == "__main__":
