@@ -30,15 +30,12 @@ def move_space_object(body, dt):
 
     **body** — тело, которое нужно переместить.
     """
-
-    print(body.Fx, body.Fy, body.Vx, body.Vy)
     ax = body.Fx/body.m
     body.x += body.Vx + ax*(dt**2)/2
     body.Vx += ax*dt
     ay = body.Fy/body.m
     body.y += body.Vy + ay*(dt**2)/2
     body.Vy += ay*dt
-    # FIXME: not done recalculation of y coordinate!
 
 
 def recalculate_space_objects_positions(space_objects, dt):
