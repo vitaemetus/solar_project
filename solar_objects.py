@@ -41,6 +41,10 @@ class Star:
     image = None
     """Изображение звезды"""
 
+    V_list = []
+
+    d_list = []
+
 
 class Planet:
     """Тип данных, описывающий планету.
